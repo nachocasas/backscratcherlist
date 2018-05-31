@@ -12,7 +12,7 @@
 
   .data-table tr td:last-child{
     font-weight: bold;
-    
+
     &::before{
       content: "$";
     }

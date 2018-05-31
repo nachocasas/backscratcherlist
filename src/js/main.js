@@ -1,6 +1,6 @@
 $(function(){
 
-  var API_URL = 'http://localhost/api/index.php';
+  var API_URL = 'https://backscratcher-api-3105.herokuapp.com';
   
   function getToken(){
     $.when($.ajax(API_URL+'/getAuth').then(function(data){

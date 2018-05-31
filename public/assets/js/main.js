@@ -1,6 +1,6 @@
 $(function(){
 
-  var API_URL = 'https://thawing-river-92492.herokuapp.com';
+  var API_URL = 'https://backscratcher-api-3105.herokuapp.com';
   
   function getToken(){
     $.when($.ajax(API_URL+'/getAuth').then(function(data){
@@ -27,13 +27,12 @@ $(function(){
   }
 
   function cloneAndFill(sampleRow, data){
-    var clonedRow = sampleRow.clone();
-    var children = clonedRow.children();
-    $(children[0]).text(data.id);
-    $(children[1]).text(data.name);
-    $(children[2]).text(data.description);
-    $(children[3]).text(data.size);
-    $(children[4]).text(data.cost);
+    clonedRow = sampleRow.clone();
+    clonedRow.children().eq(0).text(scratcher.id);
+    clonedRow.children().eq(1).text(scratcher.name);
+    clonedRow.children().eq(2).text(scratcher.description);
+    clonedRow.children().eq(3).text(scratcher.size);
+    clonedRow.children().eq(4).text(scratcher.cost);
 
     return clonedRow;
   }
