@@ -1,7 +1,7 @@
 $(function(){
 
   var API_URL = 'https://backscratcher-api-3105.herokuapp.com';
-  
+
   function getToken(){
     $.when($.ajax(API_URL+'/getAuth').then(function(data){
       var token = data.token;
@@ -13,7 +13,7 @@ $(function(){
     $.ajax({
       url: API_URL+"/scratchers",
       beforeSend: function (xhr) {
-        xhr.setRequestHeader ("Authorization", token);
+        xhr.setRequestHeader("Authorization", token);
       }
     }).done(function(data) {
       var tBody = $('.data-table tbody');
@@ -28,11 +28,11 @@ $(function(){
 
   function cloneAndFill(sampleRow, data){
     clonedRow = sampleRow.clone();
-    clonedRow.children().eq(0).text(scratcher.id);
-    clonedRow.children().eq(1).text(scratcher.name);
-    clonedRow.children().eq(2).text(scratcher.description);
-    clonedRow.children().eq(3).text(scratcher.size);
-    clonedRow.children().eq(4).text(scratcher.cost);
+    clonedRow.children().eq(0).text(data.id);
+    clonedRow.children().eq(1).text(data.name);
+    clonedRow.children().eq(2).text(data.description);
+    clonedRow.children().eq(3).text(data.size);
+    clonedRow.children().eq(4).text(data.cost);
 
     return clonedRow;
   }
