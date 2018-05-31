@@ -1,0 +1,19 @@
+{
+  "name": "scratchingclient",
+  "version": "1.0.0",
+  "description": "A UI to list the available backscratchers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ignacio Casas",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-util": "^3.0.8"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

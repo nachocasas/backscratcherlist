@@ -1,0 +1,15 @@
+.container {
+  font-family: 'Montserrat', sans-serif; }
+  .container header {
+    border-bottom: 4px solid #1063df; }
+  .container h1 {
+    margin: 2rem 0; }
+  .container .data-table tr td:last-child {
+    font-weight: bold; }
+    .container .data-table tr td:last-child::before {
+      content: "$"; }
+  .container footer {
+    border-top: 4px solid #1063df;
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
+    text-align: right; }

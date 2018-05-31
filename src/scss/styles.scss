@@ -1,0 +1,27 @@
+
+.container {
+  font-family: 'Montserrat', sans-serif;
+
+  header{
+    border-bottom: 4px solid rgb(16, 99, 223);
+  }
+
+  h1 {
+    margin: 2rem 0;
+  }
+
+  .data-table tr td:last-child{
+    font-weight: bold;
+    
+    &::before{
+      content: "$";
+    }
+  }
+
+  footer{
+    border-top: 4px solid rgb(16, 99, 223);
+    padding-top:0.5rem;
+    font-size: 0.8rem;
+    text-align: right;
+  }
+}
