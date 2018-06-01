@@ -2,9 +2,10 @@ $(function(){
 
   var API_URL = 'https://backscratcher-api-3105.herokuapp.com';
 
-  //var API_URL = 'http://localhost/index.php';
-  
+  var loading = $('.loading-overlay');
+
   function getToken(){
+    loading.addClass('active');
     $.when($.ajax(API_URL+'/getAuth').then(function(data){
       var token = data.token;
       getScratchers(token);
@@ -25,6 +26,7 @@ $(function(){
      })
 
      sampleRow.remove();
+     loading.removeClass('active');
     });
   }
 

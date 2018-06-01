@@ -24,4 +24,28 @@
     font-size: 0.8rem;
     text-align: right;
   }
+  
+}
+
+.loading-overlay {
+  display:none;
+  position: absolute;
+  width:20%;
+  height:20%;
+  top:15%;
+  left:40%;
+  align-items: center;
+  justify-content: center;
+  background-color: #CCC;
+  border-radius: 10px;
+  opacity: 0.7; 
+
+  &.active {
+    display:flex;
+  }
+
+  span {
+     font-weight: bold;
+  }
+
 }
